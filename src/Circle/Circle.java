@@ -33,4 +33,23 @@ public class Circle {
     public double getPerimeter(){
         return this.radius*2*Math.PI;
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", color='" + color + '\'' +
+                " Area : "+getArea()+" Perimeter : "+getPerimeter()+
+                '}';
+    }
+
+}
+class Test{
+    public static void main(String[] args) {
+        Circle circle=new Circle(3,"Color");
+        System.out.println(circle);
+        Cylinder cylinder=new Cylinder(5,"red",10);
+        System.out.println(cylinder);
+
+    }
 }
